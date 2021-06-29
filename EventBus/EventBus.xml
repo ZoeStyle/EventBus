@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EventBus</name>
+    </assembly>
+    <members>
+        <member name="T:EventBus.Abstractions.IDynamicIntegrationEventHandler">
+            <summary>
+            Manipulador de eventos de integração dinamicos
+            </summary>
+        </member>
+        <member name="M:EventBus.Abstractions.IDynamicIntegrationEventHandler.Handle(System.Object)">
+            <summary>
+            Manipulador
+            </summary>
+            <param name="eventData"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EventBus.Abstractions.IEventBus">
+            <summary>
+            Manipulador de eventos
+            </summary>
+        </member>
+        <member name="M:EventBus.Abstractions.IEventBus.Publish(EventBus.Events.IntegrationEvent)">
+            <summary>
+            publicar
+            </summary>
+            <param name="event"></param>
+        </member>
+        <member name="M:EventBus.Abstractions.IEventBus.Subscribe``2">
+            <summary>
+            Assinar
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="TH"></typeparam>
+        </member>
+        <member name="M:EventBus.Abstractions.IEventBus.SubscribeDynamic``1(System.String)">
+            <summary>
+            Assinar dinamicamente
+            </summary>
+            <typeparam name="TH"></typeparam>
+            <param name="eventName"></param>
+        </member>
+        <member name="M:EventBus.Abstractions.IEventBus.UnsubscribeDynamic``1(System.String)">
+            <summary>
+            Cancelar inscrição dinamicamente
+            </summary>
+            <typeparam name="TH"></typeparam>
+            <param name="eventName"></param>
+        </member>
+        <member name="M:EventBus.Abstractions.IEventBus.Unsubscribe``2">
+            <summary>
+            Cancelar inscrição
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="TH"></typeparam>
+        </member>
+        <member name="T:EventBus.Abstractions.IIntegrationEventHandler`1">
+            <summary>
+            Manipulador de eventos de integração
+            </summary>
+            <typeparam name="TIntegrationEvent"></typeparam>
+        </member>
+        <member name="M:EventBus.Abstractions.IIntegrationEventHandler`1.Handle(`0)">
+            <summary>
+            Manipulador
+            </summary>
+            <param name="event"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EventBus.Abstractions.IIntegrationEventHandler">
+            <summary>
+            Manipulador de eventos de integração
+            </summary>
+            <typeparam name="TIntegrationEvent"></typeparam>
+        </member>
+        <member name="T:EventBus.Events.IntegrationEvent">
+            <summary>
+            Evento de integração
+            </summary>
+        </member>
+        <member name="M:EventBus.Events.IntegrationEvent.#ctor">
+            <summary>
+            constructor
+            </summary>
+        </member>
+        <member name="M:EventBus.Events.IntegrationEvent.#ctor(System.Guid,System.DateTime)">
+            <summary>
+            Json Contructor
+            </summary>
+            <param name="id"></param>
+            <param name="createDate"></param>
+        </member>
+        <member name="P:EventBus.Events.IntegrationEvent.Id">
+            <summary>
+            Hash de id do evento
+            </summary>
+        </member>
+        <member name="P:EventBus.Events.IntegrationEvent.CreationDate">
+            <summary>
+            Data de criação do envento
+            </summary>
+        </member>
+        <member name="T:EventBus.Extensions.GenericTypeExtensions">
+            <summary>
+            Extensão de tipos genericos
+            </summary>
+        </member>
+        <member name="M:EventBus.Extensions.GenericTypeExtensions.GetGenericTypeName(System.Type)">
+            <summary>
+            Obtem nome do tipo generico
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EventBus.Extensions.GenericTypeExtensions.GetGenericTypeName(System.Object)">
+            <summary>
+            Obtem nome
+            </summary>
+            <param name="object"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
